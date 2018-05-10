@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    background-color: #414750;
+    font: 15px 'Montserrat-Medium', sans-serif;
+    line-height: 26px;
+    color: #fff;
+}
+.container::after,
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+
+.main-page {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    min-height: 100vh;
+}
+.main-page .left {
+    position: relative;
+    width: 495px;
+    background-color: #FFD300;
+    padding: 50px;
+}
+.main-page .right {
+    position: relative;
+    width: calc(100% - 495px);
+    background: url('../images/backgrounds/main-page-2x.png') no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.main-page .right .top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.logo {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url('../images/logo/logo.svg') no-repeat center;
+    -webkit-background-size: 50px 50px;
+    background-size: 50px 50px;
+}
+.main-page .right .social {
+    padding-right: 10px;
+    padding-top: 24px;
+}
+.main-page .right .social a {
+    display: inline-block;
+    vertical-align: bottom;
+    padding: 0 14px;
+    color: #fff;
+}
+.main-page .left .top-slogan {
+    width: 155px;
+    font: 14px 'Montserrat-SemiBold', sans-serif;
+    line-height: 19px;
+    text-align: right;
+}
