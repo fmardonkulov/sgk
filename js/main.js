@@ -17,6 +17,25 @@ document.addEventListener('DOMContentLoaded', function () {
         main_page.removeClass('move');
         time_line.removeClass('move');
 
+    });
+
+    var year = $('.year');
+
+    function setPosition() {
+        $.each(year, function () {
+            if($(this).hasClass('active')){
+                year.removeClass('visited');
+                $(this).prevAll().addClass('visited');
+            }
+        });
+    };
+
+    setPosition();
+
+    $(this).on('click', '.year', function () {
+        year.removeClass('active');
+        $(this).addClass('active');
+        setPosition();
     })
 
 });
